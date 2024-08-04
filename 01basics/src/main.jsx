@@ -73,7 +73,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <> {/* <> are called fragments */}
   <App /> {/* This executes the App function */}
   {/* // App() this is also correct but not a best practice to use like this
-  // ReactElement does not work */}
+  // ReactElement does not work More on this: https://react.dev/reference/rules/react-calls-components-and-hooks#never-call-component-functions-directly*/}
   reactElement
   {/* <reactElement /> This does not work because reactElement variable is already a React Element type, its not a
   function than can be executed to return a react element like App and App2. Hence we pass it directly
