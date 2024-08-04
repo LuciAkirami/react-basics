@@ -91,3 +91,6 @@ Credits: https://medium.com/javarevisited/react-reconciliation-algorithm-86e3e22
 Additional Resources:
 
 - https://github.com/rohan-paul/Awesome-JavaScript-Interviews/blob/master/React/Virtual-DOM-and-Reconciliation-Algorithm.md
+
+### How to Add Tailwind CSS to React Vite
+- https://tailwindcss.com/docs/guides/vite
