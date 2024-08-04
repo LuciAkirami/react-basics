@@ -94,3 +94,7 @@ Additional Resources:
 
 ### How to Add Tailwind CSS to React Vite
 - https://tailwindcss.com/docs/guides/vite
+
+### Place to Find Code Snippets
+
+- https://www.devui.io/components/cards
