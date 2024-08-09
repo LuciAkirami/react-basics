@@ -42,6 +42,10 @@ server is an Effect, as it should happen no matter which interaction caused the 
 
 Effects run at the end of a commit(https://react.dev/learn/render-and-commit) after the screen updates.
 This is a good time to synchronize the React components with some external system (like network or a third-party library).
+
+Don’t rush to add Effects to your components. Keep in mind that Effects are typically used to “step out” of your React code 
+and synchronize with some external system. This includes browser APIs(Fetching API), third-party widgets, network(connecting to DB), 
+and so on. If your Effect only adjusts some state based on other state, you might not need an Effect.
 */
 
 export default App
