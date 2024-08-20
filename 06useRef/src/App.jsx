@@ -24,6 +24,15 @@ However, setting state re-renders a component. Changing a ref does not!
 - When a piece of information is only needed by event handlers and changing it doesn’t require a re-render, 
 using a ref may be more efficient.
 
+Typically, you will use a ref when your component needs to “step outside” React and 
+communicate with external APIs—often a browser API that won’t impact the appearance of the component. 
+
+Here are a few of these rare situations:
+
+- Storing timeout IDs
+- Storing and manipulating DOM elements, which we cover on the next page
+- Storing other objects that aren’t necessary to calculate the JSX.
+
 ------ Implementing useRef vis useState --------------
 // Inside of React
 function useRef(initialValue) {
