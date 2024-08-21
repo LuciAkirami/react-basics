@@ -27,7 +27,9 @@ export default function Component1() {
     setStartTime(Date.now());
     setNow(Date.now());
 
-    // clearInterval(intervalRef.current);
+    // clearInterval if already present to start new
+    clearInterval(intervalRef.current);
+
     // here we store the interval ID returned by setInterval in the ref.current
     intervalRef.current = setInterval(() => {
       setNow(Date.now());
