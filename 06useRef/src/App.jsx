@@ -1,10 +1,14 @@
 import Component1 from "./components/RefinTimers";
+import Chat from "./components/RefForUndo";
 
 function App() {
   return (
     <>
       <h1 className="text-blue-400 text-lg mx-auto">Henlo</h1>
       <Component1 />
+      <div>
+        <Chat />
+      </div>
     </>
   );
 }
