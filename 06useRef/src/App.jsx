@@ -1,5 +1,7 @@
 import Component1 from "./components/RefinTimers";
 import Chat from "./components/RefForUndo";
+import ScrollBoxes from "./components/RefForDOM";
+import CatFriends from "./components/RefForDOMCats";
 
 function App() {
   return (
@@ -8,6 +10,12 @@ function App() {
       <Component1 />
       <div>
         <Chat />
+      </div>
+      <div>
+        <ScrollBoxes />
+      </div>
+      <div>
+        <CatFriends />
       </div>
     </>
   );
