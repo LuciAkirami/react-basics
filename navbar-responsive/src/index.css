@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-zinc-800 text-zinc-50;
+}
+
+/* ------------------------------ *\
+ UTILITIES
+\* ------------------------------ */
+
+.material-symbols-rounded {
+  @apply w-[1em] h-[1em] overflow-hidden;
+}
+
+/* ------------------------------ *\
+ COMPONENTS
+\* ------------------------------ */
+
+/* Menu Btn 
+  grid:
+    - Defines the button as a grid container for easy alignment of child elements.
+
+  bg-zinc-50/10:
+    - Sets a light gray background color (zinc-50) with 10% opacity.
+
+  rounded-xl:
+    - Gives the button extra-large rounded corners for a smooth shape.
+
+  ring-inset:
+    - Applies an inset ring inside the border of the button.
+
+  ring-1:
+    - Sets the thickness of the ring to 1px.
+
+  ring-zinc-50/[0.02]:
+    - Sets the ring color to light gray (zinc-50) with 2% opacity (barely visible).
+
+  hover:bg-zinc-50/15:
+    - On hover, changes the background color to zinc-50 with 15% opacity, making it slightly more opaque.
+
+  active:scale-95:
+    - On click (active state), scales down the button to 95% of its original size for a pressed effect.
+
+  transition-[transform,background-color]:
+    - Enables smooth transitions for scaling (transform) and background color changes on hover and click.
+*/
+
+.menu-btn {
+  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 
+  rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] hover:bg-zinc-50/15 active:scale-95 backdrop-blur-2xl
+  transition-[transform,background-color];
+}
+
+/* Navbar */
+.navbar {
+  @apply absolute top-full mt-2 right-0 p-2 min-w-40 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:opacity-100 md:blur-0 md:static md:items-center md:mt-0  md:flex md:visible md:scale-100 backdrop-blur-2xl;
+}
+
+.navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible;
+}
+
+.nav-link {
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors;
+}
+
+.nav-link.active {
+  @apply text-zinc-900 duration-500;
+}
+
+.navbar .active-box {
+  @apply absolute bg-zinc-50 rounded-lg h-9 top-2 left-2 right-2 -z-10 transition-[top,left] duration-500;
+}
+
+.btn {
+  @apply max-w-max h-9 rounded-lg font-medium text-sm flex items-center px-4 gap-2 ring-1 ring-zinc-50/5 ring-inset transition-[background-color];
+}
+
+.btn-secondary {
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80;
+}
